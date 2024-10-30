@@ -1,23 +1,78 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nb">
   <head>
-    <title>Home</title>
+    <title>OJ Nettside</title>
+    <link rel="icon" type="image/x-icon" href="image/images – Kopi (3).jpg">
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <!--
-      Need a visual blank slate?
-      Remove all code in `styles.css`!
-    -->
     <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,800;1,400;1,800&display=swap" rel="stylesheet">
     <script type="module" src="script.js"></script>
   </head>
   <body>
+    <header>
+
+
+      <!-- Navigation text functions as navigation links to help navigate the page using the "Bookmarks"-tequenics.-->
     <nav>
-      <a href="/" aria-current="page">Home</a>
-      <a href="/page2.html">Other page</a>
+       <ul style="list-style-type: none;">
+        <a href="#section1">
+         <li>Seksjon 1</li>
+        </a>
+
+        <a href="#section2"> 
+         <li>Seksjon 2</li>
+        </a>
+
+        <a href="#section3">
+          <li>Seksjon 3</li>
+        </a>
+
+      </ul>
     </nav>
+  </header>
+
     <main>
-      <h1>Home page</h1>
+      <!-- First section is displayed text to the left and image to the right -->
+      <section id="section1" class="firstSection">
+      <div class="sectionText">
+        <h1>Overskrift</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, esse.</p>
+      </div>
+      <img class="sectionImg" src="" alt="Placeholder bilde">
+      </section>
+
+      <!-- Second section is displayed image to the left and list to the right -->
+      <section id="section2" class="secondSection">
+        <img class="sectionImg" src="" alt="Placeholder bilde">
+        <div>
+          <h2>Overskrift</h2>
+          <ol>
+            <li>Nummer 1</li>
+            <li>Nummer 2</li>
+            <li>Nummer 3</li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- Third section is displayed text to the left and image to the right -->
+      <section id="section3" class="thirdSection"> 
+        <div>
+          <h2>Overskrift</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, obcaecati.</p>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci, blanditiis!</p>
+        </div>
+         <img class="sectionImg" alt="Placeholder bilde">
+      </section>
+     
     </main>
+    <footer >
+
+      <h3>Laget av Ole Jonas</h3>
+      <a href="mailto:olejonaskoder@gmail.com">Send epost</a>
+
+    </footer>
   </body>
 </html>
