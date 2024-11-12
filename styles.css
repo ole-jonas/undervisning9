@@ -17,6 +17,60 @@ header {
   z-index: 101;
 }
 
+/* Basic styles for the buttons */
+a.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #4CAF50; /* Green */
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 16px;
+  text-align: center;
+  transition: transform 0.3s ease; /* Only animate transform */
+  animation: colorChange 12s infinite; /* synck animation */
+ 
+}
+
+/* Animation to change button color continuously */
+@keyframes colorChange {
+  0% { background-color: #9C27B0 }   /* Green */
+  15% { background-color: #FF5722; }  /* Red */
+  50% { background-color: #2196F3; }  /* Blue */
+  85% { background-color: #FFEB3B; }  /* Yellow */
+  100% { background-color: #9C27B0; } /* Purple */
+}
+
+
+a.btn:hover {
+  
+  transform: scale(1.1) translateY(-5px) ; /* Button grows on hover */
+  background-color: inherit; /* Keep the color from animation */ 
+}
+
+/* Adding a bounce effect on hover using keyframes */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+a.btn:active {
+  animation: bounce 0.3s ease; /* Apply bounce animation when clicked */
+  transform: scale(1.05);
+  background-color: #ff5722;
+
+}
+
+/* Add smooth transition for hover effect */
+a.btn:hover {
+  background-color: inherit; /*Darken the color*/
+  transform: scale(1.1) translateY(-5px); /* Slightly raise button on hover */
+}
+
 nav {
   display: flex;
   flex-wrap: wrap;
@@ -26,7 +80,7 @@ nav {
   gap: 0.5rem;
   border-bottom: solid 1px #aaa;
   background-color: rgb(181, 191, 213);
-  transition: all 0.3s ease;
+  transition: all 0.3ss ease;
 }
 
 nav a {
@@ -65,9 +119,13 @@ nav a[aria-current='page'] {
  nav a[aria-current="page"] {
  background-color: #f1f1f1;
  color: #333;
-}
+ }
 }
 
+  h1 {
+    text-align: center;
+  }
+   
 section{
   display: flex;
   justify-content: space-between;
@@ -80,8 +138,8 @@ section .sectionText {
   margin-right: 20px;
 }
  section .sectionImg {
-max-width: 50%;
-height: auto;
+  max-width: 50%;
+  height: auto;
  }
 
  @media  screen and (max-width: 426px) {
@@ -119,7 +177,7 @@ div {
   align-items: center;
 }
 
-/* Bottom right text */
+ /* Bottom right text */
 .bottom-right {
   position: absolute;
   bottom: 8px;
@@ -139,11 +197,11 @@ div {
 }
 
 .sectionText {
-width: 50%;
+  width: 50%;
 }
 
 .sectionImg {
-width: 50%;
+  width: 50%;
 }
 
 main {
